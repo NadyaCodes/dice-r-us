@@ -1,21 +1,17 @@
+import { one, two, three, four, five, six, makeDice } from './diceHelpers'
+
+
 export default function Dice(props) {
   let {num} = props
   const diceArray = []
 
-  const rollDice = () => {
-    const diceNumber = Math.floor(Math.random() * 6) + 1
-    return diceNumber;
-  }
 
-  const makeDice = () => {
-    const singleRoll = rollDice()
-    return <li>{singleRoll}</li>
-  }
 
   for (let i = 0; i < num; i++) {
     diceArray.push(makeDice())
   }
   return(
-    <div>{diceArray}</div>
+    <div>{diceArray}  <br /> {one} <br />{two}<br />{three} <br />{four} <br />{five} <br />{six}</div>
+    
   )
 }
