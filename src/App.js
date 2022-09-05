@@ -6,10 +6,11 @@ import {useState} from 'react'
 
 function App() {
   const [num, setNum] = useState(0)
+  const [reset, setReset] = useState(false)
 
   return (
     <div>
-      <Number setNum={setNum}/>
+      {reset === true ? <button onClick={() => {setNum(0); setReset(false)}}>Reset</button> : <Number setNum={setNum} setReset={setReset}/>}
       {num > 0 && <Dice num={num}/>}
     </div>
   );
