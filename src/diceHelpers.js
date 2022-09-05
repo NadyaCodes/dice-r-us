@@ -9,7 +9,7 @@ const two = <div class='dice two'><span class='dot'></span><span class='dot'></s
 
 const three = <div class='dice three'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>
 
-const four = <div class='dice four'><span class='col'><span class='dot'></span><span class='dot'></span></span><span class='col'><span class='dot'></span><span class='dot'></span></span></div>
+export const four = <div class='dice four'><span class='col'><span class='dot'></span><span class='dot'></span></span><span class='col'><span class='dot'></span><span class='dot'></span></span></div>
 
 const five = <div class='dice five'><span class='col'><span class='dot'></span><span class='dot'></span></span><span class='dot mid'></span><span class='col'><span class='dot'></span><span class='dot'></span></span></div>
 

@@ -87,3 +87,20 @@ li {
   display: flex;
   margin: .3rem;
 }
+
+.rollingDice {
+  display: flex;
+}
+
+.rolling > .dice {
+  animation: rolling .3s infinite linear;
+}
+
+@keyframes rolling {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}

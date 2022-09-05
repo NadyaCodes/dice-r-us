@@ -1,9 +1,10 @@
 import { makeDice } from './diceHelpers'
 import {useEffect, useState} from 'react'
+import Rolling from './Rolling';
 
 
 export default function Dice(props) {
-  let {num} = props
+  const {num} = props
   const [showDice, setShowDice] = useState(false)
   const diceArray = []
 
@@ -22,7 +23,7 @@ export default function Dice(props) {
 
   return(
     <div>
-    {showDice === true ? <div className='diceDisplay'>{diceArray}</div> : <div>Loading...</div>  }
+    {showDice === true ? <div className='diceDisplay'>{diceArray}</div> : <Rolling num={num}/>  }
     </div>
   )
 }
