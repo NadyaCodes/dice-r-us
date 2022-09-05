@@ -13,6 +13,7 @@ li {
 .dice {
   width: 4rem;
   height: 4rem;
+  margin: .5rem;
   background-color: whitesmoke;
   border: .1rem solid black;
   border-radius: .5rem;
@@ -82,3 +83,7 @@ li {
 
 
 
+.diceDisplay {
+  display: flex;
+  margin: .3rem;
+}

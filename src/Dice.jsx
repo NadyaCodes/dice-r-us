@@ -1,4 +1,4 @@
-import { one, two, three, four, five, six, makeDice } from './diceHelpers'
+import { makeDice } from './diceHelpers'
 
 
 export default function Dice(props) {
@@ -6,12 +6,11 @@ export default function Dice(props) {
   const diceArray = []
 
 
-
   for (let i = 0; i < num; i++) {
     diceArray.push(makeDice())
   }
+
   return(
-    <div>{diceArray}  <br /> {one} <br />{two}<br />{three} <br />{four} <br />{five} <br />{six}</div>
-    
+    <div className='diceDisplay'>{diceArray}</div> 
   )
 }
