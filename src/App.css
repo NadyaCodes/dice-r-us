@@ -1,16 +1,21 @@
 :root {
-  --pale-one: #DDD1C7;
-  --pale-two: #d1dcc3;
+  --pale-one: #eae4df;
+  --pale-two: #e6ecdf;
   --med-one: #8DB580;
-  --dark-one: #737d7b;
+  --dark-one: #57615f;
   --dark-two: #4B4A67;
 }
 
-
 body {
+  width: 100vw;
+  height: 100vh;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
+  background: rgb(251,255,246);
+  background: -moz-radial-gradient(circle, rgba(251,255,246,1) 22%, rgba(195,220,187,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(251,255,246,1) 22%, rgba(195,220,187,1) 100%);
+  background: radial-gradient(circle, rgba(251,255,246,1) 22%, rgba(195,220,187,1) 100%);
 }
 
 nav {
