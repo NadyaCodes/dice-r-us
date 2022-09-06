@@ -1,5 +1,16 @@
+:root {
+  --pale-one: #DDD1C7;
+  --pale-two: #d1dcc3;
+  --med-one: #8DB580;
+  --dark-one: #737d7b;
+  --dark-two: #4B4A67;
+}
+
+
 body {
-  margin: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
@@ -8,6 +19,37 @@ nav {
 
 li {
   list-style: none;
+}
+
+button {
+  background-color: var(--dark-two);
+  color: var(--pale-one);
+  margin: .2rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: x-large;
+}
+
+nav > li > button {
+  width: 2rem;
+  height: 2rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.reset {
+  background-color: var(--dark-one);
+  color: var(--pale-two);
+}
+
+.number-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dice {
@@ -82,14 +124,15 @@ li {
 }
 
 
-
 .diceDisplay {
   display: flex;
   margin: .3rem;
+  height: 7rem;
 }
 
 .rollingDice {
   display: flex;
+  height: 7.6rem;
 }
 
 .rolling > .dice {

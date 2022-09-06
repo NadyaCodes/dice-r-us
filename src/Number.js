@@ -8,6 +8,9 @@ export default function Number(props) {
   }
 
   return(
-    <nav>{navigation}</nav>
+    <div className="number-picker">How many dice do you want to roll?
+      <nav>{navigation}</nav>
+    </div>
+    
   )
 }

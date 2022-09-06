@@ -9,8 +9,8 @@ function App() {
   const [reset, setReset] = useState(false)
 
   return (
-    <div>
-      {reset === true ? <button onClick={() => {setNum(0); setReset(false)}}>Reset</button> : <Number setNum={setNum} setReset={setReset}/>}
+    <div className='app'>
+      {reset === true ? <button onClick={() => {setNum(0); setReset(false)}} className='reset'>Reset</button> : <Number setNum={setNum} setReset={setReset}/>}
       {num > 0 && <Dice num={num}/>}
     </div>
   );
