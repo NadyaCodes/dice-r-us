@@ -36,4 +36,15 @@ export const makeDice = () => {
   }
 }
 
+// export const stopDice = (diceArray) => {
+
+//   for (let i = 0; i < diceArray.length; i++) {
+//     diceArray[i]
+
+//   }
+//   return(
+//     <div>Stop</div>
+//   )
+// }
+
 
