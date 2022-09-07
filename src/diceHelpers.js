@@ -17,22 +17,38 @@ const five = <div class='dice five'><span class='col'><span class='dot'></span><
 const six = <div class='dice six'><span class='col'><span class='dot'></span><span class='dot'></span><span class='dot'></span></span><span class='col'><span class='dot'></span><span class='dot'></span><span class='dot'></span></span></div>
 
 
-export const makeDice = () => {
+// let rollingCss = `
+// .rolling > .dice {
+//   animation: rolling .3s ${time} linear;
+// }
+
+// @keyframes rolling {
+//   0% {
+//     rotate: 0deg;
+//   }
+//   100% {
+//     rotate: 360deg;
+//   }
+// }`
+
+
+
+export const makeDice = (i) => {
   const singleRoll = rollDice()
 
   switch(singleRoll) {
     case 1:
-      return <li>{one}</li>;
+      return <li className={`rolling-${i}`}>{one}</li>;
     case 2:
-      return <li>{two}</li>;
+      return <li className={`rolling-${i}`}>{two}</li>;
     case 3:
-      return <li>{three}</li>;
+      return <li className={`rolling-${i}`}>{three}</li>;
     case 4:
-      return <li>{four}</li>;
+      return <li className={`rolling-${i}`}>{four}</li>;
     case 5:
-      return <li>{five}</li>;
+      return <li className={`rolling-${i}`}>{five}</li>;
     case 6:
-      return <li>{six}</li>;
+      return <li className={`rolling-${i}`}>{six}</li>;
   }
 }
 
