@@ -135,10 +135,21 @@ nav > li > button {
   height: 7rem;
 }
 
-.rollingDice {
-  display: flex;
-  height: 7.6rem;
+@media only screen and (max-width: 912px) {
+  .diceDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .reset {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
 }
+
+/* .rolling > .dice > span.dot, .rolling > .dice > span > span {
+  visibility: hidden;
+} */
 
 .rolling-0 > .dice {
   animation: rolling .3s 4 linear;

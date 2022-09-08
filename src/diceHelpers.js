@@ -38,17 +38,17 @@ export const makeDice = (i) => {
 
   switch(singleRoll) {
     case 1:
-      return <li className={`rolling-${i}`}>{one}</li>;
+      return <li className={`rolling-${i} rolling`}>{one}</li>;
     case 2:
-      return <li className={`rolling-${i}`}>{two}</li>;
+      return <li className={`rolling-${i} rolling`}>{two}</li>;
     case 3:
-      return <li className={`rolling-${i}`}>{three}</li>;
+      return <li className={`rolling-${i} rolling`}>{three}</li>;
     case 4:
-      return <li className={`rolling-${i}`}>{four}</li>;
+      return <li className={`rolling-${i} rolling`}>{four}</li>;
     case 5:
-      return <li className={`rolling-${i}`}>{five}</li>;
+      return <li className={`rolling-${i} rolling`}>{five}</li>;
     case 6:
-      return <li className={`rolling-${i}`}>{six}</li>;
+      return <li className={`rolling-${i} rolling`}>{six}</li>;
   }
 }
 

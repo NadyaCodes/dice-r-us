@@ -11,7 +11,6 @@ export default function Dice(props) {
     diceArray.push(makeDice(i))
   }
 
-
   return(
     <div>
     <div className='diceDisplay'>{diceArray}</div> 
