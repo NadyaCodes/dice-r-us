@@ -33,22 +33,22 @@ const six = <div class='dice six'><span class='col'><span class='dot'></span><sp
 
 
 
-export const makeDice = (i) => {
+export const makeDice = () => {
   const singleRoll = rollDice()
 
   switch(singleRoll) {
     case 1:
-      return <li className={`rolling-${i} rolling`}>{one}</li>;
+      return <li className={`one`}>{one}</li>;
     case 2:
-      return <li className={`rolling-${i} rolling`}>{two}</li>;
+      return <li className={`two`}>{two}</li>;
     case 3:
-      return <li className={`rolling-${i} rolling`}>{three}</li>;
+      return <li className={`three`}>{three}</li>;
     case 4:
-      return <li className={`rolling-${i} rolling`}>{four}</li>;
+      return <li className={`four`}>{four}</li>;
     case 5:
-      return <li className={`rolling-${i} rolling`}>{five}</li>;
+      return <li className={`five`}>{five}</li>;
     case 6:
-      return <li className={`rolling-${i} rolling`}>{six}</li>;
+      return <li className={`six`}>{six}</li>;
   }
 }
 

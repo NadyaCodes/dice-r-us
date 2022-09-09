@@ -147,44 +147,8 @@ nav > li > button {
   }
 }
 
-/* .rolling > .dice > span.dot, .rolling > .dice > span > span {
-  visibility: hidden;
-} */
-
-.rolling-0 > .dice {
-  animation: rolling .3s 4 linear;
-}
-
-.rolling-1 > .dice {
-  animation: rolling .3s 6 linear;
-}
-
-.rolling-2 > .dice {
-  animation: rolling .3s 8 linear;
-}
-
-.rolling-3 > .dice {
-  animation: rolling .3s 10 linear;
-}
-
-.rolling-4 > .dice {
-  animation: rolling .3s 12 linear;
-}
-
-.rolling-5 > .dice {
-  animation: rolling .3s 14 linear;
-}
-
-.rolling-6 > .dice {
-  animation: rolling .3s 16 linear;
-}
-
-.rolling-7 > .dice {
-  animation: rolling .3s 18 linear;
-}
-
-.rolling-8 > .dice {
-  animation: rolling .3s 20 linear;
+.rolling > .dice  {
+  animation: rolling .3s infinite linear;
 }
 
 
