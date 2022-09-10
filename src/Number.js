@@ -1,3 +1,5 @@
+import frog from './frog.png'
+
 export default function Number(props) {
   let {setNum, setReset} = props
   const navigation = []
@@ -10,6 +12,7 @@ export default function Number(props) {
   return(
     <div className="number-picker">How many dice do you want to roll?
       <nav>{navigation}</nav>
+      <div className="frog"><img src={frog} alt="questioning frog" clasName="frog"></img></div>
     </div>
     
   )

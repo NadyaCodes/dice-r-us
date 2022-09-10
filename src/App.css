@@ -160,3 +160,18 @@ nav > li > button {
     rotate: 360deg;
   }
 }
+
+
+.frog {
+  padding-top: 2rem;
+  width: 100vw;
+}
+
+
+.frog > img {
+  max-width: 40vw;
+  padding-right: 5rem;
+  float: right;
+}
+
+
