@@ -182,7 +182,7 @@ nav > li > button {
 
 
 .savedDice {
-  animation: roll-in .7s 1 linear;
+  animation: roll-in .5s 1 linear;
 }
 
 @keyframes roll-in {
@@ -190,30 +190,41 @@ nav > li > button {
     rotate: 0deg;
   }
   25% {
-    rotate: -360deg;
+    rotate: 360deg;
   }
   50% {
-    rotate: -720deg;
+    rotate: 720deg;
   }
   75% {
-    rotate: -1080deg;
+    rotate: 1080deg;
   }
   100% {
-    rotate: -1440deg;
+    rotate: 1440deg;
   }
 }
 
 
 .fly-in {
-  animation: fly-in .7s 1 linear
+  animation: fly-in .5s 1 linear
 }
 
 
 @keyframes fly-in {
   0% {
-    transform: translateX(50vw);
+    transform: translateX(-75vw);
   }
   100% {
     transform: translateX(0);
   }
+}
+
+.backwards {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.dice-container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
 }

@@ -3,18 +3,18 @@ export const rollDice = () => {
   return diceNumber;
 }
 
-const one = <div class='dice one'><span class='dot'></span></div>
+const one = <div className='dice one'><span className='dot'></span></div>
 
-const two = <div class='dice two'><span class='dot'></span><span class='dot'></span></div>
+const two = <div className='dice two'><span className='dot'></span><span className='dot'></span></div>
 
-const three = <div class='dice three'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>
+const three = <div className='dice three'><span className='dot'></span><span className='dot'></span><span className='dot'></span></div>
 
-export const four = <div class='dice four'><span class='col'><span class='dot'></span><span class='dot'></span></span><span class='col'><span class='dot'></span><span class='dot'></span></span></div>
+export const four = <div className='dice four'><span className='col'><span className='dot'></span><span className='dot'></span></span><span className='col'><span className='dot'></span><span className='dot'></span></span></div>
 
-const five = <div class='dice five'><span class='col'><span class='dot'></span><span class='dot'></span></span><span class='dot mid'></span><span class='col'><span class='dot'></span><span class='dot'></span></span></div>
+const five = <div className='dice five'><span className='col'><span className='dot'></span><span className='dot'></span></span><span className='dot mid'></span><span className='col'><span className='dot'></span><span className='dot'></span></span></div>
 
 
-const six = <div class='dice six'><span class='col'><span class='dot'></span><span class='dot'></span><span class='dot'></span></span><span class='col'><span class='dot'></span><span class='dot'></span><span class='dot'></span></span></div>
+const six = <div className='dice six'><span className='col'><span className='dot'></span><span className='dot'></span><span className='dot'></span></span><span className='col'><span className='dot'></span><span className='dot'></span><span className='dot'></span></span></div>
 
 
 
@@ -31,6 +31,8 @@ export const makeDice = (number) => {
     case 5:
       return <li className={`five`}>{five}</li>;
     case 6:
+      return <li className={`six`}>{six}</li>;
+    default:
       return <li className={`six`}>{six}</li>;
   }
 }

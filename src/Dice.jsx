@@ -73,14 +73,17 @@ export default function Dice(props) {
   }, [num])
 
   return(
-    <div>
-      <div className='diceDisplay'>
-        {allDice}
-        <button onClick={() => rollAgain()}>Roll Again</button>
-        <button>Roll: {tally}</button>
+    <div className='dice-container'>
+      <div className='roll-container'>
+        <div className='diceDisplay'>
+          {allDice}
+        </div>
+          <button onClick={() => rollAgain()}>Roll Again</button>
+          <button>Roll: {tally}</button>
+        </div>
+      <div className='saved-container'>
+        <div className='diceDisplay backwards'>{saves}</div>
       </div>
-      <div className='diceDisplay'>{saves}</div>
-      
     </div>
   )
 }
