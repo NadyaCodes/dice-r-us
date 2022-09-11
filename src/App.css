@@ -228,3 +228,21 @@ nav > li > button {
   flex-direction: column;
   width: 80vw;
 }
+
+.tally {
+  padding: 2rem;
+  font-size: x-large;
+}
+
+.roll-button {
+  background-color: var(--med-one);
+  color: var(--dark-two);
+  padding: .5rem;
+  margin-left: 5rem;
+}
+
+.roll-button:hover {
+  background-color: var(--pale-two);
+  color: var(--dark-two);
+  padding: .5rem;
+}
