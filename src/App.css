@@ -181,3 +181,39 @@ nav > li > button {
 }
 
 
+.savedDice {
+  animation: roll-in .7s 1 linear;
+}
+
+@keyframes roll-in {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -360deg;
+  }
+  50% {
+    rotate: -720deg;
+  }
+  75% {
+    rotate: -1080deg;
+  }
+  100% {
+    rotate: -1440deg;
+  }
+}
+
+
+.fly-in {
+  animation: fly-in .7s 1 linear
+}
+
+
+@keyframes fly-in {
+  0% {
+    transform: translateX(50vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -19,23 +19,22 @@ export default function Dice(props) {
     setSavedDice((prev) => [...prev, die.phase])
     dice.splice(dice.indexOf(die), 1)
   }
+ 
 
   const allDice = dice.map((die, index) => {
     return <div key={index} onClick={() => saveDice(die)}>{die.phase}</div>
   })
 
-  // const undoSave = (die) => {
-  //   console.log(die)
-  //   console.log(savedDice.indexOf(die))
-  //   const newSavedDice = savedDice.splice(savedDice.indexOf(die), 1)
-  //   setSavedDice(newSavedDice)
-  //   setDice((prev) => [...prev, die])
-  // }
 
-  // onClick={() => undoSave(die)}
+  const undoSave = (die) => {
+    const dieObject = {}
+    dieObject.phase = die
+    savedDice.splice(savedDice.indexOf(die), 1)
+    setDice((prev) => [...prev, dieObject])
+  }
 
   const saves = savedDice.map((die, index) => {
-    return <div key={index}>{die}</div>
+    return <div className="fly-in"><div key={index} className="savedDice" onClick={() => undoSave(die)}>{die}</div></div>
   })
 
 
@@ -59,7 +58,6 @@ export default function Dice(props) {
       <div className='diceDisplay'>
         {allDice}
       </div>
-      <hr/>
       <div className='diceDisplay'>{saves}</div>
       
     </div>
