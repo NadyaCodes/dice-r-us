@@ -1,4 +1,4 @@
-const rollDice = () => {
+export const rollDice = () => {
   const diceNumber = Math.floor(Math.random() * 6) + 1
   return diceNumber;
 }
@@ -17,26 +17,9 @@ const five = <div class='dice five'><span class='col'><span class='dot'></span><
 const six = <div class='dice six'><span class='col'><span class='dot'></span><span class='dot'></span><span class='dot'></span></span><span class='col'><span class='dot'></span><span class='dot'></span><span class='dot'></span></span></div>
 
 
-// let rollingCss = `
-// .rolling > .dice {
-//   animation: rolling .3s ${time} linear;
-// }
 
-// @keyframes rolling {
-//   0% {
-//     rotate: 0deg;
-//   }
-//   100% {
-//     rotate: 360deg;
-//   }
-// }`
-
-
-
-export const makeDice = () => {
-  const singleRoll = rollDice()
-
-  switch(singleRoll) {
+export const makeDice = (number) => {
+  switch(number) {
     case 1:
       return <li className={`one`}>{one}</li>;
     case 2:
@@ -51,16 +34,3 @@ export const makeDice = () => {
       return <li className={`six`}>{six}</li>;
   }
 }
-
-// export const stopDice = (diceArray) => {
-
-//   for (let i = 0; i < diceArray.length; i++) {
-//     diceArray[i]
-
-//   }
-//   return(
-//     <div>Stop</div>
-//   )
-// }
-
-

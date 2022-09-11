@@ -8,6 +8,7 @@ function App() {
   const [num, setNum] = useState(0)
   const [reset, setReset] = useState(false)
 
+
   return (
     <div className='app'>
       {reset === true ? <button onClick={() => {setNum(0); setReset(false)}} className='reset'>Reset</button> : <Number setNum={setNum} setReset={setReset}/>}
