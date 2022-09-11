@@ -35,6 +35,11 @@ button {
   font-size: x-large;
 }
 
+button:hover {
+  -webkit-box-shadow: -4px 4px 12px -3px #000000; 
+  box-shadow: -4px 4px 12px -3px #000000;
+  transform: translate(1px, -1px);}
+
 nav > li > button {
   width: 2rem;
   height: 2rem;
@@ -165,6 +170,7 @@ nav > li > button {
 .frog {
   padding-top: 2rem;
   width: 100vw;
+
 }
 
 
