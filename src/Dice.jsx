@@ -6,12 +6,13 @@ import { rollDice } from './diceHelpers'
 
 export default function Dice(props) {
   const {num} = props
-  const diceArray = []
+  let diceArray = []
   const [dice, setDice] = useState(diceArray)
   const [savedDice, setSavedDice] = useState([])
+  const [tally, setTally] = useState(1)
 
 
-  for (let i = savedDice.length; i < num; i++) {
+  for (let i = 0; i < num; i++) {
     diceArray.push({phase: <RollingDie/>})
   }
 
@@ -37,6 +38,24 @@ export default function Dice(props) {
     return <div className="fly-in"><div key={index} className="savedDice" onClick={() => undoSave(die)}>{die}</div></div>
   })
 
+  const rollAgain = () => {
+    diceArray = [];
+    for (let i = 0; i < dice.length; i++) {
+      diceArray.push({phase: <RollingDie/>})
+    }
+    setDice([...diceArray])
+    setTally(tally + 1)
+
+    for (let j=0; j < dice.length; j++) {
+      setTimeout(() => {
+        const newDiceArray = [...diceArray]
+        const die = rollDice()
+        newDiceArray[j].phase = <SingleDie die={die}/>
+        setDice(newDiceArray)
+      }, (j + 1) * 900)
+    }
+
+  }
 
 
 
@@ -57,6 +76,8 @@ export default function Dice(props) {
     <div>
       <div className='diceDisplay'>
         {allDice}
+        <button onClick={() => rollAgain()}>Roll Again</button>
+        <button>Roll: {tally}</button>
       </div>
       <div className='diceDisplay'>{saves}</div>
       
