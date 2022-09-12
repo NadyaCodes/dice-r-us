@@ -246,3 +246,26 @@ nav > li > button {
   color: var(--dark-two);
   padding: .5rem;
 }
+
+.empty-saved-dice {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.saves-dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice:hover {
+  transform: scale(1.1);
+}
+
+.dice:hover {
+  transform: scale(1.1);
+}
+
+.dice:active {
+  animation: rolling .3s infinite linear;
+}
