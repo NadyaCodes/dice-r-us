@@ -9,7 +9,7 @@ This project was bootstrapped with Create React App. It uses JS, JSX and CSS for
 ---
 ## View the Demo
 
-This project has been deployed to the following URL: 
+This project has been deployed to the following URL:  https://dice-r-us.netlify.app/
 
 ---
 
