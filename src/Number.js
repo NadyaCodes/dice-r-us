@@ -12,7 +12,7 @@ export default function Number(props) {
   return(
     <div className="number-picker"><h2>How many dice do you want to roll?</h2>
       <nav>{navigation}</nav>
-      <div className="frog"><img src={frog} alt="questioning frog" clasName="frog"></img></div>
+      <div className="frog"><img src={frog} alt="questioning frog" className="frog"></img></div>
     </div>
     
   )

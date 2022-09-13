@@ -256,6 +256,7 @@ nav > li > button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .dice:hover {
@@ -268,4 +269,12 @@ nav > li > button {
 
 .dice:active {
   animation: rolling .3s infinite linear;
+}
+
+.small-frog {
+  width: 3rem;
+}
+
+.saves-dice > h2 {
+  margin: .1rem;
 }

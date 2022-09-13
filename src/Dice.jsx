@@ -2,6 +2,8 @@ import RollingDie from './RollingDie'
 import { useState, useEffect } from 'react'
 import SingleDie from './SingleDie'
 import { rollDice } from './diceHelpers'
+import smile from './smile.png'
+
 
 
 export default function Dice(props) {
@@ -35,7 +37,7 @@ export default function Dice(props) {
   }
 
   const saves = savedDice.map((die, index) => {
-    return <div className="fly-in"><div key={index} className="savedDice" onClick={() => undoSave(die)}>{die}</div></div>
+    return <div key={index} className="fly-in"><div  className="savedDice" onClick={() => undoSave(die)}>{die}</div></div>
   })
 
   const rollAgain = () => {
@@ -74,6 +76,7 @@ export default function Dice(props) {
 
   return(
     <div className='dice-container'>
+      
       <div className='roll-container'>
 
         <div className='diceDisplay'>
@@ -81,12 +84,13 @@ export default function Dice(props) {
         </div>
           <button onClick={() => rollAgain()} className='roll-button'>Roll Again</button>
           <span className='tally'>Roll: {tally}</span>
+          {saves.length === 0 && <span>CLICK DIE TO SAVE</span>}
         </div>
         {saves.length > 0 ? 
         
         <div className='saved-container'>
         <div className='diceDisplay backwards'>{saves}</div>
-      </div> : <div className='empty-saved-dice'><div className='dice saves-dice'><h2>SAVES</h2></div></div>}
+      </div> : <div className='empty-saved-dice'><div className='dice saves-dice'><h2>SAVES</h2><img src={smile} alt="smiling frog" className='small-frog'></img></div></div>}
 
     </div>
   )
